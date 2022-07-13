@@ -1,0 +1,62 @@
+# Morgan: midlleware to install for catching requests from users requests
+more userfull to log urls and to know were we can touch if an error is happened
+  "devDependencies": {
+    "morgan": "^1.10.0"
+  }
+
+in entry (app.js, server.js...)
+const morgan=require("morgan")   // to print url requested by a user 
+app.use(morgan("dev"))
+
+
+# serve-favicon: a nodejs dependence to show icon to an api in each request
+
+# body-parser: middleware to parse body(all requests parameters are in string) we must to 
+parse that in JSon
+
+# sequelize: orm for all sql sgbd(mysql, postgresql,mariadb...) To use a sql databse with sequelize, we must install its own driver:
+For mysqlDatase we instal mysql
+For postgres: pg
+......etc
+
+
+# const {success,getUniqueId}=require("./helper")
+let pokemons=require('./mock-pokemon')
+ 
+
+
+ # les validateurs sont importants pour valider de données à mettre
+ dans notre bd, il se fait lors de la création et de la modifaiction
+ des données...
+
+// authentification 
+ça oblige deux exigences: 1. le cryptage de mot de passe(bcrypt), 2. les échanges securisés(jwt (json web token))
+
+# bcrypt: a dependence for encrypt the password
+# jsonwebtoken : ... for jwt
+
+# process.env : give us access to environment variables
+
+
+
+----------------------------Heroku------------------------------------------
+heroku is a platform where we can host our Rest Api
+after login to heroku with heroku cli, we can perform 
+git init to init our repository to git
+......
+..... all git commande
+
+aftet :
+heroku create nameOfApp         || To create our project to heroku
+git push heroku master          || To push the project to our heroku folder
+
+heroku open                     || To open the main end-point in the browser
+
+
+
+
+
+
+
+
+
