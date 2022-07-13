@@ -43,8 +43,8 @@ let pokemons=require('./mock-pokemon')
 heroku is a platform where we can host our Rest Api
 after login to heroku with heroku cli, we can perform 
 git init to init our repository to git
-......
-..... all git commande
+...... git add .
+.....  git commit -m "comment"
 
 aftet :
 heroku create nameOfApp         || To create our project to heroku
@@ -52,6 +52,12 @@ git push heroku master          || To push the project to our heroku folder
 
 heroku open                     || To open the main end-point in the browser
 
+
+////
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "dev": "NODE_ENV=development nodemon app.js"
+  },
 
 
 

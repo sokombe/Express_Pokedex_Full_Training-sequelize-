@@ -2,7 +2,9 @@
 const express=require("express")                              
 const favicon=require("serve-favicon")
 const bodyParser=require("body-parser")
+const cors=require("cors")
 const sequelize=require("./src/db/sequelize")
+
 
 const app=express()
 const port= process.env.PORT || 5000  // process.env.PORT for production envirenment
@@ -11,6 +13,7 @@ const port= process.env.PORT || 5000  // process.env.PORT for production enviren
 app
 .use(favicon(__dirname +'/favicon.ico'))
 .use(bodyParser.json())
+.use(cors())
 
 // we init our db
 sequelize.initDb()
