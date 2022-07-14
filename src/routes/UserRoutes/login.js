@@ -15,11 +15,11 @@ module.exports = (app) => {
         }
       bcrypt.compare(req.body.password, user.password).then(isPasswordValid => {
         if(!isPasswordValid) {
-          const message = `LLe mot de passe n'est pas valide.`;
+          const message = `Le mot de passe n'est pas valide.`;
           return res.status(401).json({ message})
         }
 
-        //JWT
+        //JWT*************************************************************
         const token=jwt.sign(
             {userId:user.id},
             privateKey,

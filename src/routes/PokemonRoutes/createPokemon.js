@@ -18,7 +18,7 @@ module.exports = (app) => {
         if(error instanceof UniqueConstraintError){
           throw res.status(400).json({message:error.message,data:error})
         }
-        const message=`La liste des pokémons n'a pas pu être ajouté. Réessayer dans quelques  instants.`
+        const message=`Le pokémon n'a pas pu être ajouté. Réessayer dans quelques  instants.`
         res.status(500).json({message,data:error})
       })   
   })

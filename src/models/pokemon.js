@@ -65,14 +65,14 @@ module.exports = (sequelize, DataTypes) => {
             this.setDataValue("types",types.join())
         },
         validate:{
-          isTypeValid(fromdbType){
-            if(!fromdbType){
+          isTypeValid(fromUserType){
+            if(!fromUserType){
               throw new Error("Un pokémon doit avoir au moins un type")
             }
-            if(fromdbType.split(",").length>3){
+            if(fromUserType.split(",").length>3){
               throw new Error("Un pokémon ne peut pas avoir plus de trois type")
             }
-            fromdbType.split(",").forEach(type => {
+            fromUserType.split(",").forEach(type => {
               if(!validType.includes(type)){
                 throw new Error(`Le type d'un pokémon doit appartenir à la liste suivante : ${validType}`)
               }
